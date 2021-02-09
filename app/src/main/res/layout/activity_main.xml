@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plugin Week 8"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        tools:listitem="@layout/todo_item"
+        android:layout_above="@id/etAdd"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:id="@+id/etAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Item List"
+        android:layout_alignParentBottom="true"
+        android:textColorHint="@color/teal_700"/>
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/teal_700"
+        android:textColorHint="@color/white"/>
+</RelativeLayout>
